@@ -1492,11 +1492,11 @@ window.particlesJS = function(tag_id, params){
   /* pJS elements */
   var pJS_tag = document.getElementById(tag_id),
       pJS_canvas_class = 'particles-js-canvas-el',
-      exist_canvas = pJS_tag.getElementsByClassName(pJS_canvas_class);
+      exist_canvas = pJS_tag?.getElementsByClassName(pJS_canvas_class);
 
   /* remove canvas if exists into the pJS target tag */
-  if(exist_canvas.length){
-    while(exist_canvas.length > 0){
+  if(exist_canvas?.length){
+    while(exist_canvas?.length > 0){
       pJS_tag.removeChild(exist_canvas[0]);
     }
   }
@@ -1510,7 +1510,7 @@ window.particlesJS = function(tag_id, params){
   canvas_el.style.height = "100%";
 
   /* append canvas */
-  var canvas = document.getElementById(tag_id).appendChild(canvas_el);
+  var canvas = document.getElementById(tag_id)?.appendChild(canvas_el);
 
   /* launch particle.js */
   if(canvas != null){
