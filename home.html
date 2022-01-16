@@ -975,20 +975,15 @@
 </body>
 <script>
     $(document).ready(() => {
-        var requestUrl = "http://ip-api.com/json";
-        $.ajax({
-            url: requestUrl,
-            type: 'GET',
-            success: function(json) {
-                console.log(json.country);
-                if (json.country == "Spain") {
-                    window.location.href = "/es.html";
+        fetch('https://api.ipregistry.co/?key=tryout')
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(payload) {
+                if (payload.location.country.name == "Spain") {
+                    window.location.href = "es.html"
                 }
-            },
-            error: function(err) {
-                console.log("Request failed, error= " + err);
-            }
-        });
+            });
 
     })
 </script>
