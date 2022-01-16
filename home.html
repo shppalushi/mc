@@ -980,6 +980,7 @@
             url: requestUrl,
             type: 'GET',
             success: function(json) {
+                console.log(json.country);
                 if (json.country == "Spain") {
                     window.location.href = "/es.html";
                 }
