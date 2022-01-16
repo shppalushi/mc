@@ -112,6 +112,12 @@
                                 </li>
                                 <li><a href="togorea.html" class="wow btn" style="box-shadow: none !important;">Togorea<span></span></a>
                                 </li>
+                                <li><a href="#">Change Language<span></span></a>
+                                    <ul>
+                                        <li><a href="home.html">English</a></li>
+                                        <li><a href="es.html">Español</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </nav>
                         <!-- mainmenu close -->
@@ -967,5 +973,23 @@
         <script src="js/app.js"></script>
         <script src="js/designesia.js"></script>
 </body>
+<script>
+    $(document).ready(() => {
+        var requestUrl = "http://ip-api.com/json";
+        $.ajax({
+            url: requestUrl,
+            type: 'GET',
+            success: function(json) {
+                if (json.country == "Spain") {
+                    window.location.href = "/es.html";
+                }
+            },
+            error: function(err) {
+                console.log("Request failed, error= " + err);
+            }
+        });
+
+    })
+</script>
 
 </html>
