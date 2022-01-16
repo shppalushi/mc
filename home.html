@@ -980,6 +980,7 @@
                 return response.json();
             })
             .then(function(payload) {
+                console.log(`country accessing the page: ` + payload.location.country.name);
                 if (payload.location.country.name == "Spain") {
                     window.location.href = "es.html"
                 }
