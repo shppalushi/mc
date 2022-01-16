@@ -864,7 +864,7 @@
                         <div class="widget">
                             <h5>About MC Labs©</h5>
                             <div class="tiny-border"><span></span></div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 email-col">
                                 <div class="mask">
                                     <img src="images/misc/3.jpg" alt="" class="img-fluid mb30 wow fadeInUp">
                                 </div>
@@ -872,7 +872,7 @@
                                 <address class="s1">
                                         <span><i class="fa fa-map-marker fa-lg"></i>1045, Tirana AL</span>
                                         <span><i class="fa fa-phone fa-lg"></i>+355 68 481 0631</span>
-                                        <span><i class="fa fa-envelope-o fa-lg"></i><a href="mailto:contact@themclabs.com">contact@themclabs.com</a></span>
+                                        <span><i class="fa fa-envelope-o fa-lg"></i><a style="text-decoration: none; color: #ccc" href="mailto:contact@themclabs.com">contact@themclabs.com</a></span>
                                     </address>
                             </div>
                         </div>
@@ -980,7 +980,6 @@
                 return response.json();
             })
             .then(function(payload) {
-                console.log(`country accessing the page: ` + payload.location.country.name);
                 if (payload.location.country.name == "Spain") {
                     window.location.href = "es.html"
                 }
