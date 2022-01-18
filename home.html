@@ -96,7 +96,7 @@
                         <!-- mainmenu begin -->
                         <nav>
                             <ul id="mainmenu">
-                                <li><a href="home.html">Home<span></span></a>
+                                <li><a href="home.html" class="wow btn">Home<span></span></a>
                                 </li>
                                 <li><a href="#section-services" class="wow btn" style="box-shadow: none !important;">Services<span></span></a>
                                 </li>
@@ -112,7 +112,7 @@
                                 </li>
                                 <li><a href="togorea.html" class="wow btn" style="box-shadow: none !important;">Togorea<span></span></a>
                                 </li>
-                                <li><a href="#">Change Language<span></span></a>
+                                <li><a href="#" class="wow btn">Change Language<span></span></a>
                                     <ul>
                                         <li><a href="home.html">English</a></li>
                                         <li><a href="es.html">Español</a></li>
@@ -990,15 +990,17 @@
 </body>
 <script>
     $(document).ready(() => {
-        fetch('https://api.ipregistry.co/?key=tryout')
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(payload) {
-                if (payload.location.country.name == "Spain") {
-                    window.location.href = "es.html"
-                }
-            });
+        if (!location.href.includes(`?red=true`)) {
+            fetch('https://api.ipregistry.co/?key=tryout')
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(payload) {
+                    if (payload.location.country.name == "Spain") {
+                        window.location.href = "es.html"
+                    }
+                });
+        }
 
     })
 </script>
