@@ -10251,3 +10251,9 @@ img {
         max-width: 80% !important;
     }
 }
+
+@media (min-width: 1200px){
+    .big-cont{
+        max-width: 1400px !important;
+    }
+}
