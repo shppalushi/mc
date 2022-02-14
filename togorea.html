@@ -500,20 +500,6 @@
         <!--End of Tawk.to Script-->
 </body>
 <script>
-    $(document).ready(() => {
-        if (!location.href.includes(`?red=true`)) {
-            fetch('https://api.ipregistry.co/?key=tryout')
-                .then(function(response) {
-                    return response.json();
-                })
-                .then(function(payload) {
-                    if (payload.location.country.name == "Spain") {
-                        window.location.href = "togorea-es.html"
-                    }
-                });
-        }
-
-    })
 </script>
 
 </html>

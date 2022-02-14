@@ -7,7 +7,7 @@
     "navTeam": "Team",
     "navContact": "Contact",
     "navTogorea": "Togorea",
-    "textPhilosophy": "textPhilosophy",
+    "textPhilosophy": "Philosophy",
     "haveATechnology": "Have a technology-related business idea and want to expand it, but you don't know how?",
     "youAreAFreshman": "You are a freshman in information technology and want to work with exciting projects from companies all around the world?",
     "wantToContribute": "Want to contribute for an open source project?",
@@ -122,5 +122,4 @@
     "termsOfServices": "Terms of Services",
     "liPrivacyPolicy": "Privacy Policy",
     "spanCopyright": "Copyright"
-
 }
