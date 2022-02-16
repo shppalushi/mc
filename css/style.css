@@ -5123,7 +5123,7 @@ a.btn-right {
 
 .de_testi blockquote:before {
     font-family: FontAwesome;
-    content: "\f10d";
+    /* content: "\f10d"; */
     padding-bottom: 10px;
     font-size: 20px;
     display: inline-block;

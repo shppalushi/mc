@@ -17,6 +17,9 @@ function loadTranslations(langFile) {
         .then(data => {
             for (var key in data) {
                 $(`#${key}`).text(`${data[key]}`)
+                if (key == `evenMoreThan`) {
+                    console.log($(`#${key}`).text())
+                }
             }
         })
 }
