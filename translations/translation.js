@@ -24,9 +24,6 @@ function loadTranslations(langFile) {
         .then(data => {
             for (var key in data) {
                 $(`#${key}`).text(`${data[key]}`)
-                if (key == `evenMoreThan`) {
-                    console.log($(`#${key}`).text())
-                }
             }
             $(`.idea-rn`).parent().html(`<i class="icon_lightbulb_alt idea-rn"></i>${data['iIdea']}`);
             $(`.easel-rn`).parent().html(`<i class="icon_easel easel-rn"></i>${data['iDesign']}`);
