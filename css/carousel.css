@@ -198,7 +198,8 @@
     bottom: 40px;
     width: 100%;
     height: 70px;
-	z-index: 100;
+	z-index: 10000000000;
+	
   }
   
   .container-cookie {
@@ -277,4 +278,13 @@
     34% {
       opacity: 0;
     }
+  }
+
+  @media (max-width: 534px) {
+	  #okButton{
+		  position: relative !important;
+		  right: 15px !important;
+		  top: 15px !important;
+	  }
+	  
   }
