@@ -260,8 +260,8 @@
                         <div class="col-md-4">
                             <blockquote class="s1" id="forEveryComplex">For every complex problem, there is an answer
                                 that is clear, simple and wrong.
-                                <span class="by id-color" id="wordsByH">Words by H. L. Mencken</span>
                             </blockquote>
+                            <span class="by id-color" id="wordsByH">Words by H. L. Mencken</span>
                         </div>
 
                         <div class="col-md-4 col-sm-6">
@@ -2370,6 +2370,7 @@
         btclick = true;
 
         var anim = gsap.timeline();
+        setCookie("mclabsCookie", "allSet", 10000);
         anim
             .to("#body", { duration: 0.4, y: -20, ease: "power2.out" })
             .to("#body", { duration: 0.3, rotate: 16, y: -20, ease: "back.in(6)" })
@@ -2407,8 +2408,34 @@
     }
 
     $(document).ready(() => {
-        setup();
+        var cookie = getCookie("mclabsCookie");
+        if (cookie != "allSet") {
+            setup();
+        }
     })
+
+    function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+    function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+    function eraseCookie(name) {
+        document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    }
 
 </script>
 
