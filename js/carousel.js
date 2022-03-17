@@ -27,8 +27,15 @@ $(document).ready(() => {
         $(`.np-card`).each((index, element) => {
             var height = $(`#txtDescription8`).parent().parent().height()
             $(element).css(`min-height`, height);
-            $(element).css(`height`, height);
 
         })
     }, 1000)
+
+    setTimeout(() => {
+        $(`.np-card`).each((index, element) => {
+            var height = $(`#txtDescription8`).parent().parent().height()
+            $(element).css(`min-height`, height);
+
+        })
+    }, 2000)
 })
