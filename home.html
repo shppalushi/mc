@@ -2417,6 +2417,10 @@
         if (cookie != "allSet") {
             setup();
         }
+        else {
+            $(`.container-cookie`).addClass(`d-none`);
+            $(`.main-cookie`).addClass(`d-none`);
+        }
     })
 
     function setCookie(name, value, days) {
@@ -2427,6 +2431,10 @@
             expires = "; expires=" + date.toUTCString();
         }
         document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        setTimeout(() => {
+            $(`.container-cookie`).addClass(`d-none`);
+            $(`.main-cookie`).addClass(`d-none`);
+        }, 2000);
     }
     function getCookie(name) {
         var nameEQ = name + "=";

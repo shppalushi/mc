@@ -17,7 +17,7 @@ function changeLanguage(event) {
         loadTranslations(`translations/german.json`);
     }
     else if ($(event.target).attr(`id`) == 'langItalian') {
-        loadTranslations(`translations/italian.json`);
+        loadTranslations(`translations/Italian.json`);
     }
 }
 
