@@ -2175,18 +2175,17 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="emailSubsriptionTitle">Email subscription</h5>
+                        <h5 class="modal-title" id="emailSubsriptionTitle">Newsletter</h5>
                         <button type="button" class="btn close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <label id="labelMailSubscription" for="">Subscribe via email to our newsletter to get the latest updates</label><br>
+                        <label id="labelMailSubscription" for="">Suscríbete a nuestro newsletter para recibir las últimas novedades</label><br>
                         <input type="email" class="form-control mb-2" id="inputEmailSub" style="text-align: center;" placeholder="Email...">
-                        <button class="btn btn-primary" onclick="saveEmail();">Subscribe</button>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-primary text-right" onclick="saveEmail();">Suscríbete</button>
+                        </div>
                     </div>
                 </div>
             </div>
