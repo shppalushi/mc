@@ -2446,10 +2446,10 @@
         $.post(`${apiUrl}/users/mail`, {email: email}, (xhr, status, data) => {
             console.log(status)
             if(status == "success"){
-                toastr.success("Thank you for registering. We will get in touch soon!")
+                toastr.success("Inscripción realizada con éxito.")
             }
             else{
-                toastr.warning("Your data does not seem to be right, or is already registered, please try another time!")
+                toastr.warning("Problem!")
             }
             $(`#emailSubscription`).modal(`hide`);
         })
