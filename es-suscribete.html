@@ -2176,7 +2176,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="emailSubsriptionTitle">Newsletter</h5>
-                        <button type="button" class="btn close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="btn close" data-dismiss="modal" aria-label="Close" onclick="closeModal()">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -2453,6 +2453,10 @@
             }
             $(`#emailSubscription`).modal(`hide`);
         })
+    }
+
+    function closeModal(){
+        $(`#emailSubscription`).modal(`hide`);
     }
 
 </script>
