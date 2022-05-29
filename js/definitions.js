@@ -1,4 +1,4 @@
-const apiUrl = `http://localhost:3000`;
+const apiUrl = `https://block-backend-mc.herokuapp.com`;
 
 function getUrlParam(param){
     var url = new URL(window.location.href);
